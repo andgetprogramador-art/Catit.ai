@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Catit Landing"
+description = "A starter landing page project for Catit, ready for custom branding and content."
+version = "1.0.0"
+id = "artifacts/catit-landing"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21958
+
+[services.development]
+run = "pnpm --filter @workspace/catit-landing run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/catit-landing", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/catit-landing/out"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21958"
+BASE_PATH = "/"

@@ -8,6 +8,7 @@ out-tsc
 .expo
 .expo-shared
 .next
+artifacts/catit-landing/out
 .turbo
 .svelte-kit
 .nuxt
