@@ -85,89 +85,19 @@ input:focus-visible {
   outline-offset: 3px;
 }
 
-.mascot-container {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 2rem;
+.animate-float {
+  animation: mascot-float 3.2s ease-in-out infinite;
+  transform-origin: center;
 }
 
-.mascot-head {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  background: var(--text);
-  box-shadow: inset -10px -10px 20px rgb(0 0 0 / 20%);
-}
-
-.mascot-eye {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: var(--primary);
-  box-shadow: 0 0 10px var(--primary);
-}
-
-.mascot-eye.right {
-  right: 30%;
-  left: auto;
-}
-
-.limb {
-  position: absolute;
-  z-index: 1;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  background: linear-gradient(
-    155deg,
-    var(--text) 0%,
-    color-mix(in srgb, var(--text) 72%, transparent) 100%
-  );
-  animation: float 3s ease-in-out infinite;
-}
-
-.limb.arm-left {
-  top: 50%;
-  left: -10px;
-  width: 20px;
-  height: 50px;
-  transform-origin: top center;
-}
-
-.limb.arm-right {
-  top: 50%;
-  right: -10px;
-  width: 20px;
-  height: 50px;
-  transform-origin: top center;
-}
-
-.limb.leg-left {
-  bottom: -20px;
-  left: 25px;
-  width: 25px;
-  height: 40px;
-}
-
-.limb.leg-right {
-  right: 25px;
-  bottom: -20px;
-  width: 25px;
-  height: 40px;
-}
-
-@keyframes float {
+@keyframes mascot-float {
   0%,
   100% {
-    transform: translateY(0) rotate(var(--rot, 0deg));
+    transform: translateY(0);
   }
 
   50% {
-    transform: translateY(-5px) rotate(var(--rot, 0deg));
+    transform: translateY(-9px);
   }
 }
 

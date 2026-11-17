@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { CSSProperties } from "react";
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true);
@@ -27,9 +26,11 @@ export default function Home() {
       <nav className="sticky top-0 z-50 w-full border-b border-border bg-surface/80 backdrop-blur-md">
         <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
           <a href="#inicio" className="flex items-center gap-3" aria-label="CAtiT.ai, inicio">
-            <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-text">
-              <span className="text-xl font-bold text-background">C</span>
-            </span>
+            <img
+              src="/logo.png"
+              alt="CAtiT.ai Logo"
+              className="h-10 w-10 rounded-full bg-white p-1 object-contain"
+            />
             <span className="text-xl font-bold tracking-tight">CAtiT.ai</span>
           </a>
 
@@ -65,32 +66,11 @@ export default function Home() {
 
       <section id="inicio" className="relative px-6 pb-16 pt-24">
         <div id="agencia" className="mx-auto max-w-4xl space-y-6 text-center">
-          <div className="mascot-container" aria-label="Mascota CAtiT.ai">
-            <div
-              className="limb arm-left"
-              style={{ "--rot": "25deg" } as CSSProperties}
-              aria-hidden="true"
-            />
-            <div
-              className="limb arm-right"
-              style={{ "--rot": "-25deg" } as CSSProperties}
-              aria-hidden="true"
-            />
-            <div
-              className="limb leg-left"
-              style={{ "--rot": "10deg" } as CSSProperties}
-              aria-hidden="true"
-            />
-            <div
-              className="limb leg-right"
-              style={{ "--rot": "-10deg" } as CSSProperties}
-              aria-hidden="true"
-            />
-            <div className="mascot-head" aria-hidden="true">
-              <div className="mascot-eye" />
-              <div className="mascot-eye right" />
-            </div>
-          </div>
+          <img
+            src="/mascota.png"
+            alt="Mascota CAtiT"
+            className="mx-auto mb-8 h-auto w-56 animate-float rounded-3xl md:w-64"
+          />
 
           <div className="mb-4 inline-block rounded-full border border-border bg-surface px-4 py-2 text-sm font-semibold text-primary">
             Software a la medida
@@ -367,9 +347,11 @@ export default function Home() {
       <footer className="border-t border-border bg-background px-6 py-10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 text-sm text-muted md:flex-row">
           <div className="flex items-center gap-3">
-            <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-text">
-              <span className="text-sm font-bold text-background">C</span>
-            </span>
+            <img
+              src="/logo.png"
+              alt="CAtiT.ai Logo"
+              className="h-10 w-10 rounded-full bg-white p-1 object-contain"
+            />
             <span>© 2026 CAtiT.ai. Todos los derechos reservados.</span>
           </div>
           <div className="flex gap-6">
